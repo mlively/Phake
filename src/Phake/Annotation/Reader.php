@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace Phake\Annotation;
 
@@ -110,7 +110,7 @@ class Reader
      */
     public function readReflectionAnnotation($reflVar)
     {
-        $comment = $reflVar->getDocComment();
+        $comment = (string) $reflVar->getDocComment();
 
         $annotations = array();
         foreach (explode("\n", $comment) as $line) {

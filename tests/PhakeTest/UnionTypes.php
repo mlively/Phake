@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 class PhakeTest_UnionTypes
 {
     public function unionParam(int|string $param) {
